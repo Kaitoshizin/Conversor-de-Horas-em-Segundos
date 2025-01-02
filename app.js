@@ -6,13 +6,12 @@ function tela(tag,mensagem){
 tela('h1','Conversor de Horas em segundos');
 
 function verificarSegundos(){
-    var hora = document.querySelector('input').value
-    var horas = parseFloat(hora);
-    if (isNaN(horas)){
+    var hora = parseFloat(document.querySelector('input').value);
+    if (isNaN(hora)){
         alert('Escreva algo! (Algo válido)');
     } else {
-    const segundos = horas*60*60;
-    const conversão = `${horas} hora(s) é igual a ${segundos} segundos!`;
+    const segundos = hora*60*60;
+    const conversão = `${hora} hora(s) é igual a ${segundos} segundos!`;
     tela('h1', conversão);
     document.getElementById('reiniciar').removeAttribute('disabled');
     }
